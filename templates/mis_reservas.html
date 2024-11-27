@@ -1,0 +1,35 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block content %}
+<div>
+    <br><br><br><br><br>
+    <h1 class="title">MIS <span class="highlight">RESERVAS</span></h1>
+
+
+    {% if not reservas %}
+    <ul>
+        <h1>No se encontraron reservas</h1>
+        {% else %}
+        <table>
+            <tr>
+                <th>Barbero</th>
+                <th>Servicio</th>
+                <th>Fecha</th>
+            </tr>
+            {% for reserva in reservas %}
+            <tr>
+                <td>{{ reserva.barbero.nombre }}</td>
+                <td>{{ reserva.servicio.nombre }}</td>
+                <td>{{ reserva.fecha }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No tienes reservas realizadas.</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <a href="/reserva">Relizar una reserva</a>
+</div>
+{% endblock %}

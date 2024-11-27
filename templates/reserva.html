@@ -1,0 +1,42 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+<h1 class="title">REALIZA TU  <span class="highlight">RESERVA</span></h1>
+
+<div class="separador-content">
+    <span>BarberShop</span>
+  </div>
+
+  <div class="reservation-form-container">
+        <form class="reservation-form" action="/reserva/" method="post">
+            {% csrf_token %}
+            <label for="barbero">Selecciona un Barbero</label>
+            <select id="barbero" name="barbero" required>
+                <option value="" disabled selected>Elige un barbero</option>
+                {% for barbero in barberos %}
+                    <option value="{{ barbero.id }}">{{ barbero.nombre }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="servicio">Selecciona un Servicio</label>
+            <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Elige un servicio</option>
+                {% for servicio in servicios %}
+                    <option value="{{ servicio.id }}">{{ servicio.nombre }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="date">Selecciona el Dia</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Selecciona la Hora</label>
+            <input max="21:00" min="10:00" type="time" id="time" name="time" required>  
+
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

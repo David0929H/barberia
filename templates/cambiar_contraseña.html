@@ -1,0 +1,23 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block content %}
+<div class="form-container-cambio">
+  <form class="form" action="/cambiar_contraseña/" method="post">
+    {% csrf_token %}
+    <span class="title">Cambiar contraseña</span>
+
+    <label for="currentpass" class="label-cambio">Contraseña actual</label>
+    <input type="password" id="currentpass" name="currentpass" required="" class="input-cambio">
+
+    <label for="newpass" class="label-cambio">Nueva contraseña</label>
+    <input type="password" id="newpass" name="newpass" required="" class="input-cambio">
+
+    <label for="renewpass" class="label-cambio">Reingresar nueva contraseña</label>
+    <input type="password" id="renewpass" name="renewpass" required="" class="input-cambio">
+    
+    <button type="submit" class="btn-primary submit-cambio">Confirmar</button>
+
+  </form>
+</div>
+{% endblock %}

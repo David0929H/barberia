@@ -1,0 +1,72 @@
+.reservation-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.reservation-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.reservation-form h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de los labels */
+.reservation-form label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilos de los inputs y selects */
+.reservation-form input[type="text"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+.reservation-form input[type="text"]:focus,
+.reservation-form input[type="date"]:focus,
+.reservation-form input[type="time"]:focus,
+.reservation-form select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Estilos del botón */
+.reservation-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservation-form button:hover {
+    background-color: #357abd;
+}

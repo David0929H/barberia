@@ -1,0 +1,37 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<div class="container-equipo">
+    <h1 class="title">EQUIPO <span class="highlight">BARBERÍA</span></h1>
+    <p>Contamos con un equipo de barberos que se mantiene en constante capacitación,<br>
+       con barberos experimentados y apasionados por el oficio de la barbería.</p>
+       <div class="separador-content">
+        <span>BarberShop</span>
+      </div>
+    
+    <div class="team">
+        <div class="team-member">
+            <img class="team-img" src="{% static 'images/sin_foto.jpg' %}" alt="Silueta Sergio Montecinos">
+            <h2>Sergio Montecinos</h2>
+            <p>BARBERO</p>
+            <p>5 Años de experiencia</p>
+        </div>
+        <div class="team-member">
+            <img class="team-img" src="{% static 'images/sin_foto.jpg' %}" alt="Silueta Francisco Gomez">
+            <h2>Francisco Gomez</h2>
+            <p>BARBERO</p>
+            <p>3 Años de experiencia</p>
+        </div>
+        <div class="team-member">
+            <img class="team-img" src="{% static 'images/sin_foto.jpg' %}" alt="Silueta Didier Lagos">
+            <h2>Didier Lagos</h2>
+            <p>BARBERO</p>
+            <p>9 Meses de experiencia</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
